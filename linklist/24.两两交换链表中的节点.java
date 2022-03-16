@@ -26,7 +26,7 @@ class Solution {
         // head.next = next;
         // return tail;
         ListNode next = head.next;
-        head.next = swapPairsRecursive(next.next);
+        head.next = swapPairsRecursive(head.next.next);
         next.next = head;
         return next;
     }

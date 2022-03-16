@@ -31,6 +31,7 @@ class Solution {
 
     public ListNode noRecusive(ListNode head){
         if(head == null || head.next == null)   return head;
+        // pre = null 就能避免头结点需要指向为 null 的特例情况
         ListNode pre = null, cur = head;
         // 非递归从开始向末尾开始，而递归则是从末尾向开始逆转，系统通过栈完成节点的记录
         while (cur != null){

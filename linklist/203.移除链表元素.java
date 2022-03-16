@@ -31,12 +31,13 @@ class Solution {
         return dummy.next;
     }
 
-    // 递归 -- 涉及到删除
+    // 递归 -- 从前到后 逐级递归
     public ListNode removeElements(ListNode head, int val) {
         if (head == null) return head;
-        
+
         if(head.val != val){
             head.next = removeElements(head.next, val);
+            return head;
         }else{
             // 快速找到不等的节点
             while(head != null && head.val == val){
@@ -44,7 +45,20 @@ class Solution {
             }
             return removeElements(head, val);
         }
-        return head;
+        
+    }
+
+    // 从后往前
+    public ListNode removeElements2(ListNode head, int val) {
+        if(head == null) return head;
+
+        head.next = removeElements2(head.next, val);
+        if(head.val == val){
+            return head.next;
+        }else{
+            return head;
+        }
+
     }
 
 }

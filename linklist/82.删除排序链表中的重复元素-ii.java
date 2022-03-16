@@ -16,6 +16,7 @@
  * }
  */
 class Solution {
+    // 重复元素全部删除
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(-1);
         ListNode tail = dummy;
