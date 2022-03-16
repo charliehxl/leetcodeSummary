@@ -1,3 +1,4 @@
+
 /*
  * @lc app=leetcode.cn id=206 lang=java
  *
@@ -17,7 +18,7 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-
+        return recur(head);
     }
 
     public ListNode recur(ListNode head){
