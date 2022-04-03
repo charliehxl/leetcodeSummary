@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "leetcode.vscode-leetcode",
-        "SimonSiefke.prettier-vscode"
+        "simonsiefke.prettier-vscode",
+        "vscjava.vscode-java-pack"
     ]
 }
